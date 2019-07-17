@@ -1,0 +1,181 @@
+.pricing {
+
+    margin-bottom: 20px;
+
+    @media(min-width: $desktop){
+
+        padding-bottom: 80px;
+        padding-top: 80px;
+
+    }
+    
+    .price-navbar {
+        ul li a {
+            font-weight: 400;
+        }
+        .nav-pills a.nav-link.active {
+            background: #2684c8;
+            color: #fff;
+        }
+        ul.nav-pills li {
+            text-align: center;
+            @media(max-width: $desktop){
+                width: 100%;
+            }
+            @media(min-width: $desktop) and (max-width: $large-desktop){
+                width: 50%;
+            }    
+        }
+        .nav-pills a.nav-link {
+            margin: 10px;
+            color: #444;
+            border-radius: 20px;
+            background: #eee;
+        }
+        @media(min-width: $desktop){
+            margin-bottom: 60px;
+        }
+    }
+    
+    .prices {
+        @media(min-width: $desktop){
+            .center-price {
+                padding: 0;
+                z-index: 100;
+            }
+        
+            .left-price {
+                padding-right: 0;
+            }
+        
+            .right-price {
+                padding-left: 0;
+            }    
+        }
+
+        .alert.alert-success {
+            border-radius: 20px;
+            color: #777;
+            padding: 20px;
+            font-size: 1.6rem;
+            margin: 0 auto;
+            border: none;
+            background: none;
+        }
+    
+        ul {
+            margin-top: 20px;
+            list-style: none;
+            font-size: 1.2rem;
+            padding-left: 0;
+        }
+    
+        ul li {
+            margin-left: 0;
+            padding-left: 20px;
+            padding-bottom: 14px;
+        }
+    
+        ul li:before {
+            content: '✓';
+            margin-left: -20px;
+        }
+    
+        .card {
+            box-shadow: none;
+            margin: 0;
+            border-radius: 0;
+            width: 100%;
+            background: none !important;
+    
+            .card-body {
+
+                .title-box {
+                    text-align: center;
+                }
+
+                h4.card-title {
+                    border-bottom: 1px solid #aaa;
+                    font-weight: 100;
+                    font-size: 2.4rem;
+                    text-align: center;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    padding-bottom: 20px;
+                    width: auto;
+                    margin-bottom: 20px;
+                    display: inline-block;
+                }
+    
+                p.price-details {
+                    text-align: center;
+                    padding: 20px 30px 20px 30px;
+                    line-height: 100%;
+                    font-size: 1.6rem;
+                    font-weight: 100;
+                    background: $ss-green;
+                    width: fit-content;
+                    margin: 0 auto;
+                    color: #fff;
+                    border-radius: 100px;
+                    span {
+                        margin-top: 5px;
+                        font-size: 0.9rem;
+                        display: block;
+                    }
+                }
+                p.price-info {
+                    text-align: center;
+                    padding:10px;
+                    margin-bottom: 0;
+                    line-height: 100%;
+                    letter-spacing: 0px;
+                    @media(min-width: $large-desktop){
+                        font-size: 2.0rem;
+                    }
+                    @media(max-width: $large-desktop){
+                        font-size: 1.6rem;
+                    }
+                    font-weight: 300;
+                    span {
+                        font-size: 1.4rem;
+                        display: block;
+                    }
+                }                            
+            }
+        }
+
+        .center-price .card {
+            border: 1px dashed #2684c8;
+            border-radius: 12px;
+            .card-body {
+                h4.card-title {
+                    color: #2684c8;
+                    border-bottom: 1px solid #2684c8;
+                }
+                p.price-details {
+                    background: $ss-lightblue;
+                }
+            }
+            margin-top: -30px;
+            @media(min-width: $desktop){
+                margin-bottom: -30px;
+            }
+        }
+        
+    }
+
+}
+
+.look-above {
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+        min-width: 200px;
+        height: auto;
+        margin-bottom: 40px;
+    }
+    text-align: center;
+}

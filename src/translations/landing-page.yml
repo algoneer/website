@@ -1,0 +1,110 @@
+lp-headline:
+  en: Understanding Algorithms
+
+lp-description:
+  en: "test"
+
+lp-teaser:
+  en: |
+    Algoneer is a tool that helps developers, affected users
+    and auditors to create transparent, robust and fair
+    algorithmic systems. 
+
+lp-contact-title:
+  en: Stay In Touch
+
+lp-contact-text:
+  en: |
+    Do you want to keep up-to-date with Algoneer? Leave your contact data and
+    we will keep you informed about our progress.
+
+lp-benefits-title:
+  en: Benefits
+
+lp-benefit-impact:
+  en: |
+    Gain an understanding of your algorithmic systems and ensure they produce
+    correct results and operate in a secure and compliant way.
+lp-benefit-process:
+  en: |
+    Guide all involved stakeholders through a structured process when
+    designing algorithmic systems.
+
+lp-benefit-speed:
+  en: |
+    Speed up development and deployment of algorithmic systems while ensuring
+    compliance.
+
+lp-for-developers-title:
+  en: For Developers
+
+lp-for-developers-text:
+  en: |
+    Algoneer helps people that design and develop algorithmic systems to better
+    understand the properties of these systems. This helps them to build
+    systems that are robust, fair, understandable and compliant.
+
+lp-for-affected-persons-title:
+  en: For Affected Persons
+
+lp-for-affected-persons-text:
+  en: |
+    Algoneer helps users that are affected by or work with algorithmic systems
+    to better understand how these systems make decisions. This helps them to
+    gain trust and become savvy users of such systems.
+
+lp-for-auditors-title:
+  en: For Auditors
+
+lp-for-auditors-text:
+  en: |
+    Algoneer helps auditors to analyze and certify algorithmic systems.
+    This helps them to ensure these systems are compliant and create positive
+    impact.
+
+lp-features-title:
+  en: Features
+
+lp:
+  ft:
+    developers:
+      en: Developers
+    affected-persons:
+      en: Affected Persons
+    auditors:
+      en: Auditors
+    customizable-tests:
+      title:
+        en: Customizable Tests
+      text:
+        en: |
+          Perform a wide range of tests on your algorithmic systems to measure
+          and certify their properties.
+    dataset-analytics:
+      title:
+        en: Dataset Analytics
+      text:
+        en: |
+          Analyse your datasets for issues that can cause algorithmic systems
+          to perform unexpectedly.
+    continuous-monitoring:
+      title:
+        en: Continuous Monitoring
+      text:
+        en: |
+          Continuously monitor decisions made by algorithmic systems and get
+          alerts when things go wrong.
+    verifiable-certification:
+      title:
+        en: Verifiable Certification
+      text:
+        en: |
+          Display information about performed tests and certifications and
+          be transparent about results.
+    alerting:
+      title:
+        en: Alerting
+      text:
+        en: |
+          Get notified in real-time when your algorithmic systems behave in an
+          unexpected way.

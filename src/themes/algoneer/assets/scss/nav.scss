@@ -1,0 +1,155 @@
+
+.navbar {
+
+@media(min-width: $desktop) {
+    padding-top: 40px;
+  }
+
+  img.logo {
+    height: 44px;
+  }
+}
+
+$nav-border-color: #53a0fd;
+$nav-link-color: #333333;
+
+ul.navbar-nav li{
+  position: relative;
+  font-size: 14px;
+  padding: 0 20px 0 20px;
+
+  a, a:hover {
+    color: $nav-link-color;
+  }
+
+}
+
+.navbar {
+
+  .navbar-toggler {
+    margin-top: 4px;
+
+    color: #000;
+
+    z-index: 0;
+    border: none;
+
+    @media(max-width: $desktop){
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        &.collapsed{
+            position: absolute;
+        }
+    }
+
+  }
+
+  .navbar-brand {
+
+    img.logo {
+      @media(min-width: $desktop){
+          height: 52px;
+      }
+      @media(max-width: $desktop){
+          height: 44px;
+      }
+      padding-right: 10px;
+      margin-top: -2px;
+  }
+
+  span {
+    display: block;
+    font-stretch: expanded;
+    width: 170px;
+  }
+  
+  }
+  .nav-signin {
+    width: 147px;
+    height: 45px;
+    border-radius: 5px;
+    color: $nav-link-color;
+    border: 1px solid $nav-border-color;
+    padding: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-shadow: none;
+  }
+
+  ul.navbar-nav li.dropdown {
+
+      a.dropdown-toggle {
+          &:after {
+              display: none;
+          }
+      }
+  }
+  
+  ul.navbar-nav li.dropdown:hover > .dropdown-wrapper {
+      display: block;
+  }
+
+  .dropdown-wrapper {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .dropdown-menu {
+          margin-top: 2rem;
+          font-size: 14px;
+          padding-left: 1px;
+          padding-right: 1px;
+          position: relative;
+          display: block;
+          a.dropdown-item, a.dropdown-item:hover {
+              color: #000;
+          }
+      }
+  
+  }
+
+  
+  ul.nav ul.submenu {
+      margin-left: 10px;
+      font-size: 0.8rem;
+      li {
+          a {
+              padding-left: 0;
+          }
+      }
+  }
+  
+  .navbar-brand img {
+      height: 20px;
+  }
+
+  .navbar-toggler {
+      border: none;
+  }
+
+  color: #fff;
+  font-size: 14px;
+
+  @media(max-width: $desktop){
+
+    .navbar-collapse {
+          display: none !important;
+      }
+
+      .navbar-toggler {
+          display: block;
+      }
+  }
+
+  a {
+      font-weight: 600;
+  }
+
+}
+
+.navbar-default {
+  border:none;
+  background:none;
+}

@@ -1,0 +1,22 @@
+{% extends("landing-page-inverted.html") %}
+
+{%block content%}
+
+<section class="banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <h1>{{'404-title'|translate}}</h1>
+                <p>
+                    {{'404-description'|translate}}
+                </p>
+            </div>
+            <div class="col-md-8">
+                <img src="{{'images/sketch/landingpage/illustration.png'|file}}" class="img img-responsive title-illustration" />
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{%endblock%}

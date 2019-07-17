@@ -1,0 +1,21 @@
+<section class="contact-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% if not simple %}
+                <h2>{{contact_title|translate}}</h2>
+                <p>
+                    {{contact_text|translate}}
+                </p>
+                {% endif %}
+                <a id="contact"></a>
+                <div id="signup-wrapper">
+                    <h2>{{'signup-please-wait-title'|translate}}</h2>
+                    <p>
+                        {{'signup-please-wait-text'|translate}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

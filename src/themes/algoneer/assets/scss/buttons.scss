@@ -1,0 +1,20 @@
+
+.btn-contact {
+    color: #fff;
+    border-radius: 24px;
+    padding: 6px;
+    width: 180px;
+  
+    background: $ag-green;
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.15);
+  
+    @media(max-width: $desktop){
+      width: 100%;
+    }
+  
+    @media(min-width: $desktop){
+      margin-top: 46px;
+    }
+  
+  }
+  

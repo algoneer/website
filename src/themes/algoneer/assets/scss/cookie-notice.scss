@@ -1,0 +1,30 @@
+
+.card.cookie-notice {
+    z-index: 1000;
+    @media(min-width: $desktop){
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        max-width: 300px;
+        padding-top: 8px;
+    }
+    width: 100%;
+    position: fixed;
+    @media(max-width: $desktop){
+        border: none;
+        border-radius: 0;
+    }
+    .card-body {
+        padding-top: 1em;
+    }
+    margin-bottom:0;
+    margin-right: 0;    
+    bottom: 0;
+    display: none;
+    p.card-text {
+        color: #fff;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+        margin-top: 0;
+    }
+}

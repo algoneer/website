@@ -1,0 +1,24 @@
+.feature-use-cases {
+    background: $benefits-bg;
+    color: #fff;
+    a, a:hover {
+        color: #333;
+    }
+}
+
+.feature-demo {
+    @include padding-top-lg
+}
+
+.problem-solution {
+    background: #2581c4;
+    color: #fff;
+}
+
+.feature-banner {
+    @include padding-top-xl;
+    @include padding-bottom-xl;
+    @media(min-width: $desktop){
+        padding-top: 80px;
+    }
+}

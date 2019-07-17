@@ -1,0 +1,19 @@
+{% extends "article.html" %}
+{% block extra_head %}
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      extensions: ["tex2jax.js"],
+      showMathMenu: false,
+      root: "/static/js/mathjax",
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+      },
+      TeX: { equationNumbers: { autoNumber: "AMS" } },
+      "HTML-CSS": { fonts: ["TeX"] }
+    });
+</script>
+<script type="text/javascript" src="{{'js/mathjax/mathjax.js'|file}}?config=TeX-AMS_HTML"></script>
+{% endblock %}

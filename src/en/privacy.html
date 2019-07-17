@@ -1,0 +1,108 @@
+{% extends("page-blank.html") %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="article">
+                <h1 class="display-6">Algoneer - Privacy And Data Protection Policy</h1>
+                <hr />
+    
+                <p class="lead">
+                    The protection of your data is of paramount importance to us. In the following
+                    sections we explain the measures that we take to protect your data
+                    when you use our API and app.
+                </p>
+                <h2>
+                    Data Controller
+                </h2>
+                <p>
+                    The data controller is Andreas Dewes. Detailed
+                    contact information is available in our <a href="{{'company.imprint'|href}}">imprint</a>.
+                </p>
+                <h2>
+                    Purpose of Processing
+                </h2>
+                <p>
+                    We process personal data in our service to ensure the integrity, security
+                    and reliability of the service, to collect anonymous usage statistics and to
+                    send you service-related information via the e-mail you provided. We
+                    also process information that you submit via the API to transform it according
+                    to your specification.
+                </p>
+                <h2>
+                    Data Storage and Retention
+                </h2>
+                <p>
+                    We do not persisently store any of the data that you send us for processing and
+                    it immediately after processing it. We do not retain any records of the data beyond
+                    aggregate statistical information such as the total volume and frequency of data items
+                    that you submitted over a given period of time, which we need for rate limiting and
+                    billing purposes.                
+                </p>
+                <h2>Server Location</h2>
+                <p>
+                    Our service is hosted on servers in the European Union (EU). The software packages on our
+                    servers are updated regularly, accesses to the server as well as configuration
+                    changes are monitored and regularly reviewed.
+                </p>
+                <h2>Anonymized Logs</h2>
+                <p>
+                    We keep logs of all requests to our service in order to ensure its stability, integrity and security.
+                    We do not purposely personally identifiable information in logfiles and do not retain
+                    logs files longer than necessary for identifying and analyzing incidents.
+                </p>
+                <h2>Third Party Resources</h2>
+                <p>
+                    Our web application does not use any non-embedded third-party resources.
+                </p>
+                <h2>Content-Delivery and DDoS Protection</h2>
+                <p>
+                    We use Cloudflare as a DNS and content delivery provider. This helps us among other things to protect
+                    our IT infrastructure from attacks and infiltration by masking our servers IP
+                    addresses. You can visit the <a href="https://www.cloudflare.com/security-policy/" target="_blank">
+                    Cloudflare website</a> to learn about their security and privacy policies.
+                    Cloudflare might use non-optional Cookies for caching and security reasons and might also
+                    perform CAPTCHA-based user authentication. These cookies are essential to ensure
+                    the security and performance of our website and are not used for any other
+                    purpose beyond that.
+                </p>
+                <h2>Your Contact Data</h2>
+                <p>
+                    When you sign up for our service with your e-mail address we will use that address
+                    only to send you relevant information about the service and your account.
+                </p>
+                <h2>Cookies</h2>
+                <p>
+                    Our web service currently does not use any cookies. When you log in we store an
+                    access token in the session store your browser.
+    
+                    In the future, we might use a secure HTTP-only cookie for storing your access token
+                    and a client-accessible cookie for storing a CSRF token, which helps us to prevent cross-site request forgery and
+                    cross-site scripting.
+                </p>
+                <h2>
+                    Your Rights
+                </h2>
+                <p>
+                    You have the following rights regarding your personal data that we process:
+                </p>
+                <ul>
+                    <li>
+                        Access, rectification and erasure of the data.
+                    </li>
+                    <li>
+                        Restriction of the processing of the data.
+                    </li>
+                    <li>
+                        Objecting to the processing of the data.
+                    </li>
+                    <li>
+                        Lodging a complaint with a supervisory authority.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

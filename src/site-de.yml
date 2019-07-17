@@ -1,0 +1,29 @@
+title: Algoneer
+prefix: de
+pages:
+  - src: common/index.html
+    name: index
+    index: true
+    title: Welcome
+    hidden: true
+  - type: category
+    name: features
+    slug: features
+    title: Features
+    footer: true
+  - type: category
+    name: resources
+    slug: ressourcen
+    title: Ressourcen
+    footer: true
+    children:
+    - title: Über uns
+      name: contact
+      slug: ueber-uns
+      src: common/about.html
+    - title: Impressum
+      name: imprint
+      slug: impressum
+      footer: true
+      src: en/imprint.html
+      hidden: true

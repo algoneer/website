@@ -1,0 +1,200 @@
+/* variables and definitions first */
+@import 'breakpoints.scss';
+@import 'colors.scss';
+@import 'fonts.scss';
+@import 'padding.scss';
+
+/* specific page layouts */
+@import 'about.scss';
+@import 'footer.scss';
+@import 'demo.scss';
+@import 'callout.scss';
+@import 'pricing.scss';
+@import 'landing-page.scss';
+@import 'solution.scss';
+@import 'feature.scss';
+@import 'whitepaper.scss';
+@import 'cookie-notice.scss';
+@import 'banner.scss';
+@import 'blog.scss';
+@import 'contact.scss';
+@import 'nav.scss';
+@import 'buttons.scss';
+@import 'lists.scss';
+@import 'icons.scss';
+@import 'modal.scss';
+
+/* Bootstrap */
+@import '../css/bootstrap.min.css';
+
+
+/* generic layouts */
+body
+{
+    height: 100%;
+    color: #333;
+    background: #636363;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+    font-weight: 300;
+}
+
+.wrapper {
+    background: #FFF;
+    position: relative;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 24px;
+    a {
+        font-weight: 400;
+    }
+}
+
+h1.display-3 {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+h1.display-6 {
+    font-weight: 400;
+}
+
+@media(max-width: $desktop){
+    h1.display-3 {
+        font-size: 2.4rem;
+    }
+}
+
+p, ul, ol {
+    @media(min-width: $desktop){
+        margin-bottom: 20px;
+        font-size: 18px
+    }
+    @media(max-width:989px){
+        font-size: 14px;
+    }
+}
+
+p.lead {
+    margin-top: 40px;    
+}
+
+a {
+    color: $ss-green;
+    font-weight: 400;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.container {
+    @media (min-width: $large-desktop) {
+        max-width: 1200px;
+    }
+}
+
+
+@media (max-width: $tablet) {
+
+    .col-md-2,
+    .col-md-4,
+    .col-md-6,
+    .col-md-8,
+    .col-md-10,
+    .col-md-12{
+        margin-bottom:0;
+    }
+
+    h1.display-3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    h1.display-6 {
+        text-align: left;
+    }
+  
+  p {
+    font-size: 16px;
+  }
+
+  h1, h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+  }
+
+}
+
+@media(min-width: $tablet){
+    
+    p {
+        line-height:150%;
+        margin-bottom: 40px;
+        margin-top: 10px;
+    }
+
+    h1, h2 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.0rem;
+    }
+
+    ul.links li{
+        display:inline-block;
+        padding-right:10px;
+        padding-left:10px;
+    }
+
+    li.toolbar button{
+        padding:4px;
+        border:none;
+        color:#777;
+        background:none;
+    }
+
+    li.toolbar button,
+    li.toolbar a{
+        font-size:12px;
+    }
+
+    li.toolbar{
+        position:absolute;
+        top:-24px;
+        right:0;
+    }
+}
+
+form {
+
+    .form-control {
+        border-radius: 0;
+        @media(min-width:$desktop){
+            font-size: 1.1em;
+        }
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    label {
+
+        @media(min-width: $tablet){
+            text-align: right;
+        }
+    
+    }
+       
+}

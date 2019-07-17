@@ -1,0 +1,22 @@
+img.icon {
+    display: block;
+    height: 32px;
+    margin-bottom: 22px;
+}
+img.icon-large {
+    display: block;
+    height: 64px;
+    margin-bottom: 22px;
+}
+
+img.icon-xxl {
+    display: block;
+    height: 128px;
+    @media(max-width: $tablet){
+        margin: 0 auto;
+    }
+}
+
+img.icon-rounded {
+    border-radius: 50%;
+}

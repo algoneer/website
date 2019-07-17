@@ -1,0 +1,48 @@
+translations:
+  date:
+    en: Date
+    de: Datum
+  author:
+    en: Author
+    de: Autor
+  tags:
+    en: Tags
+    de: Schlagwörter
+  general:
+    en: General
+    de: Generelles
+  app:
+    en: App
+    de: App
+  back-to-blog:
+    en: back to the blog
+    de: zurück zum Blog
+  blog-title:
+    en: Algoneer - Blog
+    de: Algoneer - Blog
+  about-us:
+    en: About us
+    de: Über uns
+  imprint:
+    en: Imprint
+    de: Impressum
+  cookie-notice-title:
+    en: Cookie Notice
+    de: Cookie-Hinweis
+  cookie-notice-text:
+    en: >
+      This site uses optional cookies for capturing
+      anonymous visitor statistics.
+      To learn more, please read our
+    de: >
+      Diese Webseite nutzt optional Cookies zur Erfassung anonymer
+      Besucherstatistiken. Um mehr zu erfahren, lesen Sie bitte unsere
+  cookie-notice-accept:
+    en: Accept
+    de: OK
+  cookie-notice-decline:
+    en: Decline
+    de: Ablehnen
+  languages:
+    de: Sprachen
+    en: Languages

@@ -1,0 +1,15 @@
+
+# Site-Wide Translations
+site-title:
+  en: Algoneer
+  de: Algoneer
+
+404-title:
+  en: 404 - Page Not Found
+
+404-description:
+  en: We are unable to find the page you requested. Sorry!
+
+$include:
+  # Landing-Page
+  - landing-page.yml

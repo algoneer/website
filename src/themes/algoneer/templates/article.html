@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block indextitle %}{% endblock %}
+{% block windowtitle %}{{article.title}}{%endblock%}
+{% block content %}
+	<div class="article">
+		<div class="page-header">
+			<h1 class="display-6">{{ article.title }}</h1>
+			<hr />
+		</div>
+		<div class="meta">{% include "metadata.html" %}</div>
+		<hr />
+		<div>{%block article %}{% endblock %}</div>
+
+	</div>
+{% endblock %}
+{% block head %}
+<script defer type="text/javascript" src="{{'js/preact.js'|file}}"></script>
+<script defer type="text/javascript" src="{{'js/newsletter/signup.js'|file}}"></script>
+{% endblock %}

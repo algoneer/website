@@ -1,0 +1,26 @@
+title: Algoneer
+prefix: ''
+pages:
+  - src: common/index.html
+    name: index
+    index: true
+    title: Welcome
+    hidden: true
+  - type: category
+    name: about
+    title: About
+    slug: about
+    hidden: true
+    footer: true
+    children:
+    - title: About Us
+      name: contact
+      hidden: true
+      footer: false
+      src: common/about.html
+    - title: Imprint
+      name: imprint
+      slug: imprint
+      footer: true
+      src: en/imprint.html
+      hidden: true

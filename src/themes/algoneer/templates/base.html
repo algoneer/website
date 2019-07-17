@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>{{language.title or site.title}} | {% block windowtitle %}{{ language.subtitle or site.subtitle }}{% endblock
+    %}</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> {%block styles %}
+  <link href="{{'css/main.css'|file}}" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image/ico" href="{{'images/favicon.ico'|file}}" /> {%endblock%}
+  <script defer src="{{'js/jquery.min.js'|file}}" type="text/javascript"></script>
+  <script defer src="{{'js/popper.min.js'|file}}" type="text/javascript"></script>
+  <script defer src="{{'js/bootstrap.min.js'|file}}" type="text/javascript"></script> {% block head %}{% endblock %}
+  {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+  {% block body %}
+  {% include "banner.html" %}
+  <div class="wrapper">
+    <!-- start nav -->
+    <nav class="{%block navbar_class%}{%endblock%} navbar navbar-expand-md navbar-light">
+      <div class="container container_nav">
+        <a class="navbar-brand" href="{{''|href}}">
+          {%block logo%}
+          <img class="img-fluid logo" alt="img" src="{{'images/logos/logo-final.png'|file}}" />
+          {%endblock%}
+        </a>
+
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#footer"
+          aria-controls="footer" aria-expanded="false" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+
+            {% for page in pages %}
+            {% if not page.hidden and page.level == 0 %}
+            {% if page.children %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"
+                href="{%if page.src %}{{page.name|href}}{%elif page.href%}{{page.href|href}}{%else%}javascript:void(0){%endif%}"
+                id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                {{ page.navtitle or page.title }}
+              </a>
+              <div class="dropdown-wrapper" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu">
+                  {% for child in page.children %}
+                  {% if not child.hidden and child.level == 1 %}
+                  {% if child.url %}
+                  <a class="dropdown-item" href="{{child.url|href}}">{{ child.navtitle or child.title }}</a>
+                  {% elif child.absolute_url %}
+                  <a class="dropdown-item" href="{{child.absolute_url}}">{{ child.navtitle or child.title }}</a>
+                  {% else %}
+                  <a class="dropdown-item" href="{{child.name|href}}">{{ child.navtitle or child.title }}</a>
+                  {% endif %}
+                  {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </li>
+            {% else %}
+            <li class="nav-item"><a class="nav-link" href="{{page.name|href}}">{{ page.navtitle or page.title }}</a>
+            </li>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+
+          </ul>
+          <!--
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item"><a href="https://app.algoneer.org/login" class="nav-signin">SIGN IN</a></li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </nav>
+    <!-- end nav -->
+
+    <div id="main">
+      {% block main %}
+      <div class="container first">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            {%block content %}{%endblock%}
+          </div>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+
+    {% block footer %}
+    <!-- start footer -->
+    <div class="{%block footer_class%}{%endblock%} footer collapse show-on-tablet" id="footer">
+      <div class="container">
+        <div class="row">
+          {% for page in pages %} {% if page.footer and page.type == 'category' %}
+          <div class="col-auto">
+            <h4>{{page.navtitle or page.title}}</h4>
+            <ul class="list-unstyled nav flex-column top-nav">
+              {% if page.href %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{page.href|href}}">{{'overview'|translate}}</a>
+              </li>
+              {% endif %}
+              {% for subpage in page.children %}
+              {% if subpage.footer is undefined or subpage.footer %}
+              {% if subpage.children %}
+              <li class="nav-item">
+                <a class="nav-link" href="{%if subpage.src %}{{subpage.name|href}}{%else%}javascript:void(0){%endif%}">
+                  {{ subpage.navtitle or subpage.title }}
+                </a>
+                <ul class="nav submenu flex-column">
+                  {% for child in subpage.children %} {% if (not child.hidden) or child.footer %}
+                  <li class="nav-item">
+                    {% if child.url %}
+                    <a class="nav-link" href="{{child.url|href}}">{{ child.navtitle or child.title }}</a>
+                    {% elif child.absolute_url %}
+                    <a class="nav-link" href="{{child.absolute_url}}">{{ child.navtitle or child.title }}</a>
+                    {% else %}
+                    <a class="nav-link" href="{{child.name|href}}">{{ child.navtitle or child.title }}</a>
+                    {% endif %}
+                  </li>
+                  {% endif %} {% endfor %}
+                </ul>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                {% if subpage.url %}
+                <a class="nav-link" href="{{subpage.url|href}}">{{ subpage.navtitle or subpage.title }}</a>
+                {% elif subpage.absolute_url %}
+                <a class="nav-link" href="{{subpage.absolute_url}}">{{ subpage.navtitle or subpage.title }}</a>
+                {% else %}
+                <a class="nav-link" href="{{subpage.name|href}}">{{ subpage.navtitle or subpage.title }}</a>
+                {% endif %}
+              </li>
+              {% endif %}
+              {% endif %}
+              {% endfor %}
+              {% for link in page.extra_links %}
+              <li class="nav-item">
+                <a class="nav-link"
+                  href="{%if link.url %}{{ link.url|href }}{% elif link.absolute_url %}{{ link.absolute_url }}{% endif %}">{{
+                  link.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %} {% endfor %}
+          {#
+          <div class="col-auto border_class">
+            <h4>{{'languages'|translate}}</h4>
+            <ul class="list-unstyled nav flex-column top-nav">
+              <li class="nav-item">
+                {% if page is defined%}
+                {% set link=page.name %}
+                {% else %}
+                {% set link='' %}
+                {% endif %}
+                <a class="nav-link" href="{{link|href(language='de')}}">Deutsch</a>
+                <a class="nav-link" href="{{link|href(language='en')}}">English</a>
+              </li>
+            </ul>
+          </div>
+        #}
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#footer"
+          aria-controls="footer" aria-expanded="false" aria-label="Toggle navigation"
+          style="font-size:2rem; margin-top:-4px;">
+          &times;
+        </button>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+  {% include "cookie-notice.html" %}
+  {% include "analytics.html" %}
+  {% endblock %}
+</body>
+
+</html>

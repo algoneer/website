@@ -1,0 +1,44 @@
+{% extends("landing-page.html") %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="display-6">{{'about-us-headline'|translate}}</h1>
+            <p class="lead">
+                {{'about-us-text'|translate}}
+            </p>
+        </div>
+    </div>
+</div>
+
+<section class="problem-solution">
+    <div class="container">
+        <div class="team">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-4">
+                    <p>
+                        <img src="{{'images/andreas-sm.png'|file}}" class="img img-fluid" />
+                    </p>
+                    <h2>Dr. Andreas Dewes</h2>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-8 text">
+                    <p>
+                        {{'about-andreas'|translate}}
+                    </p>
+                </div>
+                <div class="col-xl-3 col-lg-2 col-md-4">
+                    <p>
+                        <img src="{{'images/sofia-sm.png'|file}}" class="img img-fluid" />
+                    </p>
+                    <h2>Sofia Kurochkina</h2>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-8 text">
+                    <p>
+                        {{'about-sofia'|translate}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

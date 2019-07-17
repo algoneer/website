@@ -1,0 +1,29 @@
+.solution-features {
+
+    @include padding-top-lg;
+
+    .description {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    img {
+        padding: 20px;
+        @media(min-width: $desktop){
+            padding: 80px;
+        }
+    }
+}
+
+.solution-banner {
+    @include padding-top-xl;
+    @include padding-bottom-xl;
+
+    @media(min-width: $desktop){
+        padding-top: 80px;
+    }
+}
+
+.solution-benefits {
+    background: $benefits-bg;
+    color: #fff;
+}

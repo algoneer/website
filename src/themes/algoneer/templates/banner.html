@@ -1,0 +1,14 @@
+{% if site.config.banner is defined %}
+<script>
+    window.bannerCookieName = "{{site.config.banner}}";
+</script>
+<script type="text/javascript" src="{{'js/banner.js'|file}}"></script>
+<div class="kp-banner" id="banner">
+    <div class="banner-body">
+        <p class="banner-text">
+            <a onclick="banner.close();" href="{{site.config.banner|href}}">{{'banner-text'|translate}}</a>
+            <a class="banner-close" href="javascript:banner.close();">❌</a>
+        </p>
+    </div>
+</div>
+{% endif %}

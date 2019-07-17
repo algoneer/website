@@ -1,0 +1,35 @@
+$kip-blue1: #2581c4;
+
+section.contact-form {
+
+    @include padding-top-lg;
+
+    @include padding-bottom-lg;
+    
+    h2 {
+        color: $kip-blue1;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-weight: 500;
+    }
+}
+
+iframe.map {
+
+    padding-top: 0;
+    padding-bottom: 20px;
+
+}
+
+table.contact-table tr > td:first-child {
+    text-align: right;
+    font-weight: 600;
+    width: 50%;
+}
+
+div.map {
+    pointer-events: none;
+}

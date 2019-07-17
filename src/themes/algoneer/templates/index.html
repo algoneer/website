@@ -1,0 +1,31 @@
+{% extends "base.html" %} {%block windowtitle%}{{'blog-title'|translate}}{%endblock%} {% block content %}
+
+{% if blog_page %}
+<div class="row articles">
+	<div class="col-lg-12">
+		<h1 class="display-6">{{'blog-title'|translate}}</h1>
+		{% for article in blog_page %}
+		<a href="{{('blog-'+article.name)|href}}" class="article-item">
+			<h2>{{ article.title }}</h2>
+			<p class="meta">
+				<span class="key">{{'date'|translate}}: <span class="value">{{article['date-str']}}</span></span>
+				<span class="key">{{'author'|translate}}: <span class="value">{{article.author}}</span></span>
+				<span class="key">{{'tags'|translate}}: <span class="value">{{article.tags|join(', ')}}</span></span>
+			</p>
+			<p class="summary">{{ article.summary }}</p>
+		</a>
+		{% endfor %}
+	</div>
+</div>
+{%endif%} {% if n and n > 1 %}
+<div class="pagination">
+	<ul>
+		{% if i > 0 %} {% set num = i-1 %}
+		<li class="prev"><a href="{{'blog-%d'|format(num)|href}}">&larr; Previous</a></li>
+		{% endif %}
+		{% if i < n-1 %} {% set num = i+1 %}
+		<li class="prev"><a href="{{'blog-%d'|format(num)|href}}">Next &rarr;</a></li>
+		{% endif %}
+	</ul>
+</div>
+{% endif %} {% endblock %}

@@ -1,0 +1,6 @@
+$include: site.yml
+url: https://algoneer.org
+# we generate links without extensions as nginx rewrites those URLs automatically
+hide-href-extensions: ['/index.html', 'index.html', '.html']
+context:
+  env: production
